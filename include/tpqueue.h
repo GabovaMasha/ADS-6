@@ -21,9 +21,9 @@ throw std::string("!");
 } else {
 int it = last++;
 while ((--it >= first) && (arr[it % size].prior < el.prior)) {
-arr[(it + 1) & size] = arr[it % size];
+arr[(it + 1) % size] = arr[it % size];
 }
-arr[(it + 1) & size] = el;
+arr[(it + 1) % size] = el;
 }
 }
 T pop() {
